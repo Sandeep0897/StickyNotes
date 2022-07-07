@@ -1,0 +1,21 @@
+footer{
+  position:relative;
+  
+  display:block;  
+  width:100%;
+  background-color: azure;
+
+  
+}
+
+
+@media only screen and (max-width: 768px){
+  footer{
+    background-color: azure;
+    position:relative;
+    bottom:0;
+    display:block;  
+    width:100%
+    
+  }
+}
