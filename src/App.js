@@ -22,7 +22,7 @@ function App() {
         <Route path="/login" element= {<Login/>} exact/>
         <Route path="/register" element= {<Register/>} exact/>
         <Route path="/post" element= {<Post/>} exact/>
-        <Route path="/notes/:_id" element= {<Edit/>} exact/>
+        <Route path="/notes/:id" element= {<Edit/>} exact/>
         <Route path="/profile" element= {<Profile/>} exact/>
         </Routes>
        </main>
