@@ -70,7 +70,7 @@ function capitalizeFirstLetter(string) {
         <Card.Text>
           {note.content}
         </Card.Text>
-        <Button variant="info" component={Link} to={`/notes/${note._id}`}><EditIcon/></Button>
+        <Button variant="info"  href= {`/notes/${note.id}`}><EditIcon/></Button>
         <Button  variant="danger"
                       className="mx-2"
                       onClick={() => deleteHandler(note._id)}><DeleteIcon/></Button>
