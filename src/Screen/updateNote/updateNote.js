@@ -20,7 +20,7 @@ function Edit() {
 
   useEffect(() => {
     const fetchNotebyId = async () => {
-      const URL = `http://localhost:5000/notes/${id}`;
+      const URL = `https://stickynoteswebapp.herokuapp.com/notes/${id}`;
       const { data } = await axios.get(URL);
       setTitle(data.title);
       setContent(data.content);

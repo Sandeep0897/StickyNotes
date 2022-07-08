@@ -24,7 +24,7 @@ export const userLoginAction = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:5000/users/login",
+      "https://stickynoteswebapp.herokuapp.com/users/login",
       {
         email,
         password,
@@ -61,7 +61,7 @@ export const userRegisterAction =
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/users/",
+        "https://stickynoteswebapp.herokuapp.com/users/",
         {
           name,
           email,
@@ -98,7 +98,7 @@ export const userProfileUpdateAction = (user) => async (dispatch, getState) => {
       },
     };
 
-    const URL = "http://localhost:5000/users/profile";
+    const URL = "https://stickynoteswebapp.herokuapp.com/users/profile";
     const { data } = await axios.post(
       URL,user,config
     );

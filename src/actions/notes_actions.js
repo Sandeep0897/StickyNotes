@@ -31,16 +31,18 @@ export const getNotesAction = () => async (dispatch, getState) => {
     };
 
     //Axios api request
-    const URL = "http://localhost:5000/notes";
+    const URL = "https://stickynoteswebapp.herokuapp.com/notes";
     const { data } = await axios.get(URL, config);
 
     //dispatching from axios get req
     dispatch({ type: GET_NOTES_SUCCESS, payload: data });
   } catch (error) {
+    console.log(error) 
     dispatch({
       type: GET_NOTES_FAILURE,
       payload: "Please Login or Register before proceeding with this request",
     });
+   
   }
 };
 
@@ -62,7 +64,7 @@ export const postNoteAction =
       };
 
       //api req
-      const URL = "http://localhost:5000/notes";
+      const URL = "https://stickynoteswebapp.herokuapp.com/notes";
       const { data } = await axios.post(
         URL,
         {
@@ -98,7 +100,7 @@ export const updateNoteAction =
         },
       };
 
-      const URL = `http://localhost:5000/notes/${id}`;
+      const URL = `https://stickynoteswebapp.herokuapp.com/notes/${id}`;
       const { data } = await axios.put(
         URL,
         { title: title, content: content },
@@ -126,7 +128,7 @@ export const updateNoteAction =
           }
         }
         
-        const URL =`http://localhost:5000/notes/${id}`
+        const URL =`https://stickynoteswebapp.herokuapp.com/notes/${id}`
         const {data} =await axios.delete(URL,config);
 
         dispatch({type:DELETE_NOTES_SUCCESS,payload:data})
