@@ -61,9 +61,9 @@ function capitalizeFirstLetter(string) {
       {loading || loadingDelete ? <Loading/> :
       <Container>
       <Row>
-      {notes && notes.map((note)=>{
+      {notes && notes.map((note,index)=>{
         return  <>
-        <Col key={note._id} xs={12} md={4} lg={3} >
+        <Col key={index} xs={12} md={4} lg={3} >
             <Card bg="Light" border="warning" style={{ marginTop: '25px' }}>
             <Card.Body>
         <Card.Title>{note.title}</Card.Title>
